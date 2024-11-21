@@ -8,6 +8,7 @@ export default function ProductList() {
   const dispatch = useDispatch();
   const handleAddToCart = (product) => {
     dispatch({ type: "cart/added", payload: product });
+    dispatch({ type: "cart/calculateTotal" });
   };
   return (
     <>
